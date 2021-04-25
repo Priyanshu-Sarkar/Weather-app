@@ -3,6 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
 const app = express();
+const port = process.env.PORT;
 
 hbs.registerPartials(path.join(__dirname, '../views/components/'));
 app.use(express.static(path.join(__dirname, '../public/')));
@@ -21,6 +22,6 @@ app.get('*', (req, res)=>{
     res.render('error');
 });
 
-app.listen(8000, ()=>{
-    console.log('The weather app is runnng on http://localhost:8000');
+app.listen(port, ()=>{
+    console.log('The weather app is runnng');
 });
