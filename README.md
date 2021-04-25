@@ -1,0 +1,1 @@
+This project is made by Technosoft. This app finds out the temperature and weather status of the given place.
