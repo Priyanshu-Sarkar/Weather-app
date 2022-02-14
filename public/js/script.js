@@ -53,7 +53,7 @@ submitBtn.addEventListener('click', async(e)=>{
         city_name.innerText = 'Please write the cityname before you search';
     }else{
         try{
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=646d6e4c0db73b5e9c56a54d899ff577`
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=646d6e4c0db73b5e9c56a54d899ff577`
             const response = await fetch(url);
             const data = await response.json();
             console.log(data);
