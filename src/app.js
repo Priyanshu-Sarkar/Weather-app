@@ -3,7 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 hbs.registerPartials(path.join(__dirname, '../views/components/'));
 app.use(express.static(path.join(__dirname, '../public/')));
